@@ -1,6 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
 import React from 'react';
+import ReactDOM from 'react-dom';
+
+
+class ErrorBox extends React.Component {
+  state = {
+
+  }
+
+  render() {
+    return (
+        <div className="Errorbox"> {this.props.message} </div>
+    )
+  }
+}
+
 
 class Hello extends React.Component {
   state = {
@@ -11,8 +25,12 @@ class Hello extends React.Component {
     fetch("http://localhost:5000/")
     .then(res => res.json())
     .then((result) => {
-      this.setState({message:result})
+        this.setState({message:result})
     })
+      .catch(err => { console.log(err)
+                      const conerrelement = (<ErrorBox message="Connect Error." />);
+                      ReactDOM.render(conerrelement, document.getElementById('root'));
+                      })
   };
 
   render() {
@@ -22,7 +40,7 @@ class Hello extends React.Component {
       <p />
       <span>{this.state.message}</span>
       </div>
-      )
+    );
   };
 }
 
