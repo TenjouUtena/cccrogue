@@ -33,3 +33,60 @@
 }
 
 
+.InventoryBox {
+    flex-grow: 2;
+
+}
+
+
+
+
+.GridSquare {
+    width: 25px;
+    height: 35px;
+
+}
+
+.GridWall {
+    background-color: #777777;
+
+}
+
+.GridFloor {
+    background-color: #333333
+}
+
+div.Grid {
+/*
+    max-width: 75vw;
+    max-height: 85vh;
+*/
+    overflow: hidden;
+    flex-grow: 5;
+    margin: auto;
+    border-style: solid;
+    border-color: black;
+}
+
+table.Grid {
+    border-spacing: 0px;
+    padding: 0px;
+    margin: 0px;
+}
+
+td.Grid {
+    padding: 0px;
+    margin: 0px;
+}
+
+
+
+.TitleBar {
+    display: flex;
+}
+
+
+
+.MainGame {
+    display: flex;
+}
