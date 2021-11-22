@@ -1,5 +1,7 @@
 import React from 'react';
 import Grid from './Grid.js';
+import Inventory from './Inventory.js';
+
 
 class MainGame extends React.Component {
   state = {
@@ -10,7 +12,11 @@ class MainGame extends React.Component {
         {type:'wall'},
         {type:'wall'},
       ]],
-    }
+    },
+    inventory: [
+      {item:'hat'},
+      {item:'beanie'},
+    ],
   }
 
   render() {
@@ -18,6 +24,7 @@ class MainGame extends React.Component {
         <div className="MainGame">
         <Grid height={this.state.gridmap.height}
               width ={this.state.gridmap.width} />
+        <Inventory />
         </div>
     )
   }

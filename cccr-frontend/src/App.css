@@ -1,5 +1,11 @@
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  top: 0px;
+  left: 0px;
+  max-height: 100vh;
+  height: 100vh;
 }
 
 
@@ -33,9 +39,11 @@
 }
 
 
-.InventoryBox {
+.Inventory {
     flex-grow: 2;
-
+    min-width: 150px;
+    border-style: solid;
+    border-color: black;
 }
 
 
@@ -57,15 +65,11 @@
 }
 
 div.Grid {
-/*
-    max-width: 75vw;
-    max-height: 85vh;
-*/
-    overflow: hidden;
+    overflow: scroll;
     flex-grow: 5;
-    margin: auto;
     border-style: solid;
     border-color: black;
+    max-height: 100%;
 }
 
 table.Grid {
@@ -83,10 +87,29 @@ td.Grid {
 
 .TitleBar {
     display: flex;
+    min-height: 50px;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    border: 0px;
+    padding: 0px;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 5px;
 }
 
+.TitleBarNode {
+    border-style: solid;
+    padding: 5px;
+    border-radius: 10px;
+
+}
 
 
 .MainGame {
     display: flex;
+    position: relative;
+    flex-grow: 1;
+    overflow: hidden;
+    align-content: flex-start;
 }
