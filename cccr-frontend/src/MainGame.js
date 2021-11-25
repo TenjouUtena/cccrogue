@@ -24,7 +24,7 @@ class MainGame extends React.Component {
         <div className="MainGame">
         <Grid height={this.state.gridmap.height}
               width ={this.state.gridmap.width} />
-        <Inventory />
+          <Inventory inventory={this.state.inventory} />
         </div>
     )
   }
