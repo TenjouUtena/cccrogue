@@ -1,9 +1,9 @@
 #!/bin/bash
 
 cd /home/ec2-user/cccr-api 
-#cat "Before Run" > beforerun
+#echo "Before Run" > beforerun
 
 source environment/bin/activate
-flask run --host=0.0.0.0 &
+nohup flask run --host=0.0.0.0 --port=80 &
 
-#cat "After Run" > afterrun
+#echo "After Run" > afterrun
