@@ -1,0 +1,4 @@
+#!/bin/bash
+
+source environment/bin/activate
+flask run --host=0.0.0.0 &
