@@ -4,6 +4,6 @@ cd /home/ec2-user/cccr-api
 #echo "Before Run" > beforerun
 
 source environment/bin/activate
-nohup flask run --host=0.0.0.0 --port=80 &
+nohup flask run --host=0.0.0.0 --port=80 > /dev/null 2> /dev/null < /dev/null & 
 
 #echo "After Run" > afterrun
