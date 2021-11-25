@@ -1,17 +1,13 @@
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  top: 0px;
+  left: 0px;
+  max-height: 100vh;
+  height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
 .App-header {
   background-color: #282c34;
@@ -28,11 +24,92 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+
+
+.Errorbox {
+    position: absolute;
+    top: 10px;
+    background-color: #881111;
+    color: #dddddd;
+    text-align: center;
+    left:  12.5vw;
+    width: 75vw;
+    height: 100px;
+}
+
+
+.Inventory {
+    flex-grow: 2;
+    min-width: 150px;
+    border-style: solid;
+    border-color: black;
+}
+
+
+
+
+.GridSquare {
+    width: 25px;
+    height: 35px;
+
+}
+
+.GridWall {
+    background-color: #777777;
+
+}
+
+.GridFloor {
+    background-color: #333333
+}
+
+div.Grid {
+    overflow: scroll;
+    flex-grow: 5;
+    border-style: solid;
+    border-color: black;
+    max-height: 100%;
+}
+
+table.Grid {
+    border-spacing: 0px;
+    padding: 0px;
+    margin: 0px;
+}
+
+td.Grid {
+    padding: 0px;
+    margin: 0px;
+}
+
+
+
+.TitleBar {
+    display: flex;
+    min-height: 50px;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    border: 0px;
+    padding: 0px;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 5px;
+}
+
+.TitleBarNode {
+    border-style: solid;
+    padding: 5px;
+    border-radius: 10px;
+
+}
+
+
+.MainGame {
+    display: flex;
+    position: relative;
+    flex-grow: 1;
+    overflow: hidden;
+    align-content: flex-start;
 }
