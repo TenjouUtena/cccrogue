@@ -1,6 +1,5 @@
 #!/bin/bash
-easy_install pip
-pip install virtualenv
+pip3 install virtualenv
 cd /home/ec2-user/cccr-api
 virtualenv environment
 source environment/bin/activate
