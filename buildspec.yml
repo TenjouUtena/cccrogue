@@ -10,7 +10,6 @@ phases:
       npm install
   build:
     commands:
-      cd cccr-frontend
       npm run build
 
 artifacts:
