@@ -6,11 +6,11 @@ phases:
       nodejs: 14.x
 
     commands:
-      cd cccr-frontend
-      npm install
+      - cd cccr-frontend
+      - npm install
   build:
     commands:
-      npm run build
+      - npm run build
 
 artifacts:
   files:
