@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import ErrorBox from './ErrorBox.js';
+import api_url from './env.js';
+
 
 
 
@@ -10,7 +12,7 @@ class Hello extends React.Component {
   }
 
   componentDidMount() {
-    fetch("http://localhost:5000/")
+    fetch(api_url)
       .then(res => res.json())
       .then((result) => {
         this.setState({message:result})

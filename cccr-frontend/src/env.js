@@ -1,0 +1,7 @@
+
+
+
+//export default function foo() {return("bar")};
+
+export const api_url = process.env.REACT_APP_API_URL;
+
