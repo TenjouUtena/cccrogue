@@ -46,6 +46,11 @@
 }
 
 
+.ActionBox {
+    grid-area: 2 / 3 / 2 / 3;
+    border-style: solid;
+    border-color: black;
+}
 
 
 .GridSquare {
@@ -82,11 +87,22 @@ td.Grid {
     margin: 0px;
 }
 
+.MessageNode {
+    text-align: left;
+    font-family: monospace;
+    font-size: 9pt;
+    color: #EEEEEE;
+}
+
+
 .MessageBox {
     overflow: scroll;
-    grid-area: 2 / 1 / 3 / 3;
+    grid-area: 2 / 1 / 3 / 2;
     border-style: solid;
     border-color: black;
+    background-color: #333333;
+    color: #EEEEEE;
+
 
 }
 
