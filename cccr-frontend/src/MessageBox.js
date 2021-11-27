@@ -1,9 +1,6 @@
 import React, { Component } from 'react'
 
 export default class MessageBox extends Component {
-  state = {
-    messages: []
-  }
 
   messagesEndRef = React.createRef()
 
@@ -27,6 +24,7 @@ export default class MessageBox extends Component {
   scrollToBottom() {
     this.messagesEndRef.current.scrollIntoView({ behavior: 'smooth' })
   }
+
   render() {
     return (
       <div className="MessageBox">
