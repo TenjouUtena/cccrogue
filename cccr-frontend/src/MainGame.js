@@ -33,7 +33,7 @@ class MainGame extends React.Component {
 
 
   onTestAction(e) {
-    this.messageDispatch("Test Message!")
+    this.messageDispatch("Test Message! 5")
   }
 
   messageDispatchSet(md) {
