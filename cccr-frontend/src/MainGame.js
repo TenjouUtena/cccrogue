@@ -19,7 +19,7 @@ class MainGame extends React.Component {
       {item:'hat'},
       {item:'beanie'},
     ],
-    messages: [],
+    messages: ['Welcome to CCC Rogue!'],
   }
 
   constructor(props) {

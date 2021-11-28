@@ -96,6 +96,10 @@ td.Grid {
     padding-bottom: 1px;
 }
 
+.MessageEnd {
+    height: 2px;
+    min-height: 2px;
+}
 
 .MessageBox {
     overflow-y: scroll;
