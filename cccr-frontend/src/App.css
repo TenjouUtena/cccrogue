@@ -112,6 +112,41 @@ td.Grid {
 
 }
 
+
+.MainGame {
+    display: grid;
+    grid-template-columns: auto 250px;
+    grid-template-rows: auto 100px;
+    column-gap: 2px;
+    row-gap: 2px;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.TitleGameList {
+    position: absolute;
+    background-color: whitesmoke;
+    top:calc(100% + 2px);
+    border: #282c34;
+    border-style: solid;
+    border-width: 1px;
+    z-index: 100;
+}
+
+.TitleGameListEntry {
+    background-color: whitesmoke;
+    border: #282c34;
+    border-style: solid;
+    border-width: 1px;
+}
+
+
+.TitleGameListEntry:hover {
+    background-color: burlywood;
+}
+
+
 .TitleBar {
     display: flex;
     min-height: 50px;
@@ -132,13 +167,3 @@ td.Grid {
 
 }
 
-
-.MainGame {
-    display: grid;
-    grid-template-columns: auto 250px;
-    grid-template-rows: auto 100px;
-    column-gap: 2px;
-    row-gap: 2px;
-    position: relative;
-    overflow: hidden;
-}

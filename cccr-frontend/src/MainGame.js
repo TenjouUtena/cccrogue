@@ -3,6 +3,7 @@ import Grid from './Grid.js';
 import Inventory from './Inventory.js';
 import MessageBox from './MessageBox.js';
 import ActionBar from './ActionBar.js'
+import {api_url} from './env.js';
 
 
 class MainGame extends React.Component {
@@ -16,8 +17,7 @@ class MainGame extends React.Component {
       ]],
     },
     inventory: [
-      {item:'hat'},
-      {item:'beanie'},
+
     ],
     messages: ['Welcome to CCC Rogue!'],
   }
@@ -32,8 +32,34 @@ class MainGame extends React.Component {
   }
 
 
+  updateGame() {
+    this.updateMap();
+    this.updateInventory();
+  } 
+  
+  updateInventory () {
+    fetch(`${api_url}Game/${this.props.game_id}/Inventory`)
+      .then(data => data.json())
+      .then(data => this.setState({ inventory: data }));
+  }
+
+  updateMap() {
+    fetch(`${api_url}Game/${this.props.game_id}/Map`)
+      .then(data => data.json())
+      .then(data => this.setState({ gridmap: data }));
+  }
+
   onTestAction(e) {
     this.messageDispatch("Test Message! 5")
+  }
+
+  componentDidUpdate(prevProps) {
+    if(this.props.game_id !== prevProps.game_id) {
+      this.updateGame();
+    }
+  }
+
+  componentDidMount(e) {
   }
 
   messageDispatchSet(md) {
